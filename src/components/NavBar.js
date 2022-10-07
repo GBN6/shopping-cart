@@ -7,7 +7,7 @@ const Nav = () => {
       <div className="nav-container">
           <div className='logo'>
             <Link className='text-link' to='/'>
-              <h3>Logo</h3>
+              <h1>Logo</h1>
             </Link>
           </div>
           <nav className='nav-links'>
