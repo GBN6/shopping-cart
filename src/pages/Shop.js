@@ -23,7 +23,6 @@ const Shop = () => {
 
   return (
     <div className='products-container'>
-      <h1>STORE PAGE</h1>
       <div className='category-container'>
         <ul>
           {category.map((item) => (
