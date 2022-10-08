@@ -8,7 +8,7 @@ import Shop from './pages/Shop';
 const App = () => {
   return (
     <BrowserRouter>
-    <Nav />;
+    <Nav />
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/shop' element={<Shop />} />
