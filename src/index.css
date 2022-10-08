@@ -50,7 +50,8 @@ html {
 
 
 footer {
-  position: relative;
+  position: absolute;
+  font-size: 2rem;
   bottom: 0;
   left: 0;
   display: flex;
