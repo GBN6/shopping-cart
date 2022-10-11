@@ -30,7 +30,7 @@ const CartProductCard = (props) => {
           Remove
         </button>
       </div>
-      <div className='cart-price'>${price}</div>
+      <div className='cart-price'>${price.toFixed(2)}</div>
       <div className='add-and-remove'>
         <button className='add-button' type='button' onClick={() => handleMinusQuantity(product)} >
           <FaMinus />
