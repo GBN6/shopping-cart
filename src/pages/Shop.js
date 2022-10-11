@@ -31,17 +31,17 @@ const Shop = (props) => {
       setFiltered(productsCopy.filter((item) => item.category === category));
     } else if (category === 'electronics') {
       setFiltered(productsCopy.filter((item) => item.category === category));
-    } else if (category === "women's clothing") {
-      setFiltered(productsCopy.filter((item) => item.category === category));
-    } else if (category === "men's clothing") {
-      setFiltered(productsCopy.filter((item) => item.category === category));
+    } else if (category === "women's") {
+      setFiltered(productsCopy.filter((item) => item.category === "women's clothing"));
+    } else if (category === "men's") {
+      setFiltered(productsCopy.filter((item) => item.category === "men's clothing"));
     }
   };
 
   const handleCategory = (e) => {
     const categoryTitle = document.querySelector('.product-category-name');
     const category = e.target.textContent.toLowerCase();
-    categoryTitle.textContent = category.toUpperCase();
+    categoryTitle.textContent = category.toUpperCase().split(' ')[0];
     handleFilterCategory(category);
   };
 
@@ -61,7 +61,7 @@ const Shop = (props) => {
         <ul>
           {categories.map((item) => (
             <li onClick={handleCategory} key={item}>
-              {item}
+              {item.split(' ')[0]}
             </li>
           ))}
         </ul>

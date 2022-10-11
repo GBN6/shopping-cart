@@ -4,9 +4,11 @@ import Nav from './components/NavBar';
 import Home from './pages/Home';
 import Footer from './components/Footer';
 import Shop from './pages/Shop';
+import Cart from './pages/Cart';
 
 const App = () => {
   const [cart, setCart] = useState([]);
+  const [cartAmount, setCartAmount] = useState(0)
 
   const handleAddToCart = (product) => {
     console.log(cart);
@@ -15,6 +17,7 @@ const App = () => {
       cart.forEach((item) => {
         if (item.product.title === product.title) {
           item.product.quantity += 1;
+          setCartAmount(cartAmount + 1)
           isInCart = true;
         }
       });
@@ -22,18 +25,20 @@ const App = () => {
     if (!isInCart) {
       setCart((prevState) => [...prevState, { product }]);
       isInCart = true;
+      setCartAmount(cartAmount + 1)
     }
   };
 
   return (
-    <BrowserRouter>
-      <Nav />
+    <BrowserRouter className='app' >
+      <Nav cartAmount={cartAmount}/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route
           path='/shop'
           element={<Shop handleAddToCart={handleAddToCart} />}
         />
+        <Route path='/cart' element={<Cart product={cart} />} />
       </Routes>
       <Footer />
     </BrowserRouter>
