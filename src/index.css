@@ -90,7 +90,7 @@ h2 {
   width: 3rem;
   height: 3rem;
   border-radius: 50px;
-  background-color: rgb(255, 153, 153);
+  background-color: #32E0C4;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -221,17 +221,27 @@ h2 {
   flex: 1 1;
 }
 
+.cart-price {
+  font-weight: 900;
+}
+
 .add-and-remove {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  border: 1px solid #222831;
+  padding: 0rem 1rem;
 }
 
-.remove-button, .remove-button, .add-button {
+.remove-button, .minus-button, .add-button {
   border: none;
   background-color: inherit;
   font-size: 1.5rem;
+}
+
+.remove-button {
+  align-self: flex-start;
 }
 
 /* FOOTER  */
@@ -248,4 +258,9 @@ footer {
   width: 100%;
   padding: 1rem 0px;
   font-size: 2rem;
+}
+.signature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

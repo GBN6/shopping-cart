@@ -2,7 +2,7 @@ import React from 'react';
 import CartProductCard from '../components/CartProductCard';
 
 const Cart = (props) => {
-  const { product } = props;
+  const { product, handleRemoveFromCart } = props;
 
   const cartProducts = product.map((item) => (
     <CartProductCard
@@ -11,6 +11,7 @@ const Cart = (props) => {
       title={item.product.title}
       price={item.product.price}
       quantity={item.product.quantity}
+      handleRemoveFromCart={handleRemoveFromCart}
     />
   ));
 

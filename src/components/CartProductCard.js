@@ -3,7 +3,8 @@ import { FaMinus, FaPlus } from 'react-icons/fa';
 import { FaTrashAlt } from 'react-icons/fa';
 
 const CartProductCard = (props) => {
-  const { image, title, price, quantity } = props;
+  const { image, title, price, quantity, handleRemoveFromCart } = props;
+  const product = {image, title, price, quantity}
 
   return (
     <div className='cart-product-card'>
@@ -12,15 +13,15 @@ const CartProductCard = (props) => {
       </div>
       <div className='detail'>
         {title}
-        <button className='remove-button' type='button'><FaTrashAlt />Remove</button>
+        <button onClick={() => handleRemoveFromCart(product)} className='remove-button' type='button'><FaTrashAlt />Remove</button>
       </div>
-      {price}
+      <div className="cart-price">${price}</div>
       <div className='add-and-remove'>
         <button className='add-button' type='button'>
           <FaMinus />
         </button>
         <div className='quant-in-cart'>{quantity}</div>
-        <button className='remove-button' type='button'>
+        <button className='minus-button' type='button'>
           <FaPlus />
         </button>
       </div>

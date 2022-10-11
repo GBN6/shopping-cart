@@ -8,7 +8,7 @@ import Cart from './pages/Cart';
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  const [cartAmount, setCartAmount] = useState(0)
+  const [cartAmount, setCartAmount] = useState(0);
 
   const handleAddToCart = (product) => {
     console.log(cart);
@@ -17,7 +17,7 @@ const App = () => {
       cart.forEach((item) => {
         if (item.product.title === product.title) {
           item.product.quantity += 1;
-          setCartAmount(cartAmount + 1)
+          setCartAmount(cartAmount + 1);
           isInCart = true;
         }
       });
@@ -25,20 +25,35 @@ const App = () => {
     if (!isInCart) {
       setCart((prevState) => [...prevState, { product }]);
       isInCart = true;
-      setCartAmount(cartAmount + 1)
+      setCartAmount(cartAmount + 1);
     }
   };
 
+  const handleRemoveFromCart = (product) => {
+    cart.forEach((item, index) => {
+      if (item.product.title === product.title) {
+        setCartAmount(cartAmount - product.quantity);
+        cart.splice(index, 1);
+      }
+      console.log(cart);
+    });
+  };
+
   return (
-    <BrowserRouter className='app' >
-      <Nav cartAmount={cartAmount}/>
+    <BrowserRouter className='app'>
+      <Nav cartAmount={cartAmount} />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route
           path='/shop'
           element={<Shop handleAddToCart={handleAddToCart} />}
         />
-        <Route path='/cart' element={<Cart product={cart} />} />
+        <Route
+          path='/cart'
+          element={
+            <Cart product={cart} handleRemoveFromCart={handleRemoveFromCart} />
+          }
+        />
       </Routes>
       <Footer />
     </BrowserRouter>
