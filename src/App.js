@@ -39,6 +39,28 @@ const App = () => {
     });
   };
 
+  const handleAddQuantity = (product) => {
+    cart.forEach((item) => {
+      if (item.product.title === product.title) {
+        item.product.quantity += 1
+        setCartAmount(cartAmount + 1);
+        console.log(item.product.quantity)
+      }
+    });
+  };
+  const handleMinusQuantity = (product) => {
+    if (product.quantity === 1) {
+      handleRemoveFromCart(product);
+    } else {
+      cart.forEach((item) => {
+        if (item.product.title === product.title) {
+          item.product.quantity -= 1;
+          setCartAmount(cartAmount - 1);
+        }
+      });
+    }
+  };
+
   return (
     <BrowserRouter className='app'>
       <Nav cartAmount={cartAmount} />
@@ -51,7 +73,12 @@ const App = () => {
         <Route
           path='/cart'
           element={
-            <Cart product={cart} handleRemoveFromCart={handleRemoveFromCart} />
+            <Cart
+              product={cart}
+              handleAddQuantity={handleAddQuantity}
+              handleMinusQuantity={handleMinusQuantity}
+              handleRemoveFromCart={handleRemoveFromCart}
+            />
           }
         />
       </Routes>

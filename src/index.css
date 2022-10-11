@@ -176,7 +176,7 @@ h2 {
   font-size: 5rem;
   color: #393E46;
   font-weight: 900;
-  border-bottom: 3px solid #9fa0a1;
+  border-bottom: 3px solid #32E0C4;
 }
 
 .cart-container {
@@ -240,8 +240,13 @@ h2 {
   font-size: 1.5rem;
 }
 
+.add-button, .minus-button {
+  color: #32E0C4;
+}
+
 .remove-button {
   align-self: flex-start;
+  color: #32E0C4;
 }
 
 /* FOOTER  */
