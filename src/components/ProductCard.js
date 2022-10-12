@@ -12,7 +12,7 @@ const ProductCard = (props) => {
       <div className='product-details'>
         <div className='product-info'>
           <div className='product-name'>{title}</div>
-          <div className='product-price'>${price}</div>
+          <div className='product-price'>${price.toFixed(2)}</div>
         </div>
         <button type='button' onClick={() => handleAddToCart(product)}>
           Add to cart
