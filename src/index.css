@@ -47,7 +47,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   background-color: #222831;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .nav-links {
@@ -95,6 +95,62 @@ h2 {
   font-weight: bold;
 }
 
+
+/* HOME HOME-IMG HOME-MESSAGE */
+.home-page-container {
+  max-width: 125rem;
+  margin: 0px auto;
+  padding: 2rem;
+}
+
+.home-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6rem;
+  margin-bottom: 20rem;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+}
+
+.message .small-message {
+  color: #9fa0a1;
+  font-size: 1.9rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+} 
+
+.message .big-message {
+  color: #222831;
+  font-size: 6.4rem;
+  font-weight: bold;
+  line-height: 1.2;
+  border-bottom: 5px solid #32E0C4;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.shop-now-button {
+  text-align: center;
+  padding: 2rem 6rem;
+  background-color: #222831;
+  color: #32E0C4;
+  border-radius: 50px;
+  border: none;
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.home-page-image {
+  width: 70rem;
+  border-radius: 20%;
+}
 
 /* SHOP - PRODUCTS */
 

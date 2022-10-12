@@ -9,7 +9,7 @@ const Nav = (props) => {
       <div className='nav-container'>
         <div className='logo'>
           <Link className='text-link' to='/'>
-            <h1>Logo</h1>
+            <h1>FakeStore</h1>
           </Link>
         </div>
         <nav className='nav-links'>

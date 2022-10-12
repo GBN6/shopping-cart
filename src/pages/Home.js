@@ -1,9 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import homeImage from '../assets/home-page.jpg'
 
 const Home = () => {
     return (
-        <div>
-            <h1>HOME PAGE OF STORE</h1>
+        <div class="home-page-container">
+            <div className="home-page" >
+                <div className="message">
+                    <div className="small-message">
+                        Bets online fake store in the world
+                    </div>
+                    <div className="big-message">
+                        Buy everything, and nothing simultaneously!
+                    </div>
+                    <Link to='/shop'>
+                        <button className="shop-now-button" type="button">Shop now</button>
+                    </Link>
+                </div>
+                <img className="home-page-image" src={homeImage} alt='homepage' />
+            </div>
         </div>
     )
 }
