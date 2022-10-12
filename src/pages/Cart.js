@@ -34,7 +34,7 @@ const Cart = (props) => {
         <h3>Total</h3>
         <div className='sub-price'>
           <p>Sub-price</p>
-          <div>{totalPrice}</div>
+          <div>{totalPrice.toFixed(2)}</div>
         </div>
         <div className='shipping'>
           <p>Shipping</p>
@@ -42,7 +42,7 @@ const Cart = (props) => {
         </div>
         <div className='total'>
           <p>Total(VAT incl.)</p>
-          <div>${totalPrice}</div>
+          <div>${totalPrice.toFixed(2)}</div>
         </div>
         <button className='order' type='button'>ORDER</button>
       </div>

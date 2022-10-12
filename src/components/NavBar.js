@@ -19,7 +19,7 @@ const Nav = (props) => {
           <Link className='text-link' to='/shop'>
             Shop
           </Link>
-          <Link className='text-link' to='/'>
+          <Link className='text-link' to='/contact'>
             Contact
           </Link>
           <Link className='text-link-icon' to='/cart'>

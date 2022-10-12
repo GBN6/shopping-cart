@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Footer from './components/Footer';
 import Shop from './pages/Shop';
 import Cart from './pages/Cart';
+import Contact from './pages/Contact';
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -81,6 +82,7 @@ const App = () => {
             />
           }
         />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>
