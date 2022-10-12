@@ -14,7 +14,7 @@ const ProductCard = (props) => {
           <div className='product-name'>{title}</div>
           <div className='product-price'>${price.toFixed(2)}</div>
         </div>
-        <button type='button' onClick={() => handleAddToCart(product)}>
+        <button type='button' className='add-to-cart-button' onClick={() => handleAddToCart(product)}>
           Add to cart
         </button>
       </div>

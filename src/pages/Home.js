@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import homeImage from '../assets/home-page.jpg'
+import shopping from '../assets/shopping.jpg'
 
 const Home = () => {
     return (
-        <div class="home-page-container">
+        <div className="home-page-container">
             <div className="home-page" >
                 <div className="message">
                     <div className="small-message">
@@ -17,7 +18,7 @@ const Home = () => {
                         <button className="shop-now-button" type="button">Shop now</button>
                     </Link>
                 </div>
-                <img className="home-page-image" src={homeImage} alt='homepage' />
+                <img className="home-page-image" src={shopping} alt='homepage' />
             </div>
         </div>
     )
