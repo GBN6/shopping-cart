@@ -368,6 +368,7 @@ h2 {
   font-weight: 900;
   font-size: 2rem;
   padding: 1rem;
+  border: 2px solid #222831;
 }
 
 .payment-method .icons img {
@@ -517,6 +518,10 @@ footer {
   .product-card-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contact-social {
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -547,8 +552,17 @@ footer {
   }
 
   .category-container ul {
+    margin-top: 1rem;
     gap: 1rem ;
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .detail {
+    font-size: 1.5rem;
+  }
+
+  .add-and-remove {
+    gap: 1rem;
   }
 
   .cart-title {

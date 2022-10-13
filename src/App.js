@@ -12,7 +12,6 @@ const App = () => {
   const [cartAmount, setCartAmount] = useState(0);
 
   const handleAddToCart = (product) => {
-    console.log(cart);
     let isInCart = false;
     if (cart.length > 0) {
       cart.forEach((item) => {
@@ -36,7 +35,6 @@ const App = () => {
         setCartAmount(cartAmount - product.quantity);
         cart.splice(index, 1);
       }
-      console.log(cart);
     });
   };
 
@@ -45,7 +43,6 @@ const App = () => {
       if (item.product.title === product.title) {
         item.product.quantity += 1
         setCartAmount(cartAmount + 1);
-        console.log(item.product.quantity)
       }
     });
   };
