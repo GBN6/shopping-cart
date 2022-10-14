@@ -9,7 +9,7 @@ const Home = () => {
             <div className="home-page" >
                 <div className="message">
                     <div className="small-message">
-                        Bets online fake store in the world
+                        Best online fake store in the world
                     </div>
                     <div className="big-message">
                         Buy everything, and nothing simultaneously!

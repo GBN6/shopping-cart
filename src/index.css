@@ -469,6 +469,7 @@ footer {
   }
   .home-page{
     justify-content: center;
+    position: relative;
   }
   .message {
     align-items: center;
@@ -477,9 +478,10 @@ footer {
   .home-page-image {
     position: absolute;
     z-index: -1;
-    width: 80%;
+    width: 90%;
     opacity: 0.4;
     animation: none;
+    margin-top: 3rem;
   }
 
   .message .big-message {
@@ -487,6 +489,11 @@ footer {
     margin-bottom: 3rem;
     border-bottom: none;
   } 
+
+  .message .small-message {
+    text-align: center;
+    color: #393E46;
+  }
   
 }
 
@@ -535,20 +542,35 @@ footer {
 
 @media (max-width: 480px) {
   .nav-links {
-    gap: 0;
+    gap: 1rem;
     width: 100%;
   }
 
-  .small-message {
-    font-size: 1.4rem;
-  }
-
-  .big-message {
-    font-size: 5rem;
+  .home-page-container {
+    padding: 1rem;
   }
 
   .home-page-image {
-    width: 90%;
+    width: 95%;
+  }
+
+  .message {
+    gap: 2rem;
+    justify-content: space-around;
+  }
+
+  .message .small-message {
+    font-size: 1rem;
+    color: #393E46;
+  }
+
+  .message .big-message {
+    font-size: 3rem;
+  }
+
+  .home-page {
+    margin-top: 2rem;
+    margin-bottom: 10rem;
   }
 
   .product-category-name {
