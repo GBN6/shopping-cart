@@ -8,7 +8,7 @@ const Nav = (props) => {
     <header className='header'>
       <div className='nav-container'>
         <div className='logo'>
-          <Link className='text-link' to='/'>
+          <Link className='text-link' to='/shopping-cart'>
             <h1>FakeStore</h1>
           </Link>
         </div>
